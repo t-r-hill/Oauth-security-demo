@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{basicauthentication/fragments/layout}">
+<head>
+    <title>Login Page</title>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <h1>Login</h1>
+    <div th:each="uri:${authUris}">
+        <a class="btn btn-primary" th:href="${uri.value}" th:text="${uri.key}" href="#" role="button">Link</a>
+    </div>
+</div>
+</body>
+</html>
